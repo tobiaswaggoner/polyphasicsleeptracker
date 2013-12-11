@@ -1,5 +1,11 @@
-﻿@{
+﻿@model DotNet.Highcharts.Highcharts
+
+@{
     ViewBag.Title = "Home Page";
+}
+@section scripts
+{
+    <script src="~/Scripts/Highcharts-3.0.1/js/highcharts.js"></script>
 }
 @section featured {
     <section class="featured">
@@ -19,6 +25,8 @@
     </section>
 }
 <h3>We suggest the following:</h3>
+@(Model)
+
 <ol class="round">
     <li class="one">
         <h5>Getting Started</h5>
