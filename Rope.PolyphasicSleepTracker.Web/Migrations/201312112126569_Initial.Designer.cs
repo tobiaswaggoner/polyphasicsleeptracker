@@ -5,13 +5,13 @@ namespace Rope.PolyphasicSleepTracker.Web.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class initialversion : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initialversion));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201312111941300_initialversion"; }
+            get { return "201312112126569_Initial"; }
         }
         
         string IMigrationMetadata.Source

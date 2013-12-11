@@ -25,11 +25,11 @@ namespace Rope.PolyphasicSleepTracker.Web.Filters
         {
             public SimpleMembershipInitializer()
             {
-                Database.SetInitializer<UsersContext>(null);
+                Database.SetInitializer<SleepTrackerContext>(null);
 
                 try
                 {
-                    using (var context = new UsersContext())
+                    using (var context = new SleepTrackerContext())
                     {
                         if (!context.Database.Exists())
                         {

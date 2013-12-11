@@ -1,30 +1,29 @@
-﻿using System;
+﻿// *********************************************************************
+// (c) 2013 Rope Development
+// *********************************************************************
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Globalization;
-using System.Web.Security;
+using System.Linq;
+using Rope.PolyphasicSleepTracker.Web.Models.Tracking;
 
 namespace Rope.PolyphasicSleepTracker.Web.Models
 {
-    public class UsersContext : DbContext
-    {
-        public UsersContext()
-            : base("DefaultConnection")
-        {
-        }
-
-        public DbSet<UserProfile> UserProfiles { get; set; }
-    }
-
     [Table("UserProfile")]
     public class UserProfile
     {
         [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
+
         public string UserName { get; set; }
+        public Guid? CurrentExperimentPK { get; set; }
+
+        [ForeignKey("CurrentExperimentPK")]
+        [InverseProperty("ExperimentPK")]
+        public virtual Experiment CurrentExperiment { get; set; }
     }
 
     public class RegisterExternalLoginModel

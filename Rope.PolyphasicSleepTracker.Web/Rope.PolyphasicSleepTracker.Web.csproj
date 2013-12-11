@@ -187,12 +187,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201312111941300_initialversion.cs" />
-    <Compile Include="Migrations\201312111941300_initialversion.Designer.cs">
-      <DependentUpon>201312111941300_initialversion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\SleepTrackerContext.cs" />
+    <Compile Include="Models\Tracking\Experiment.cs" />
+    <Compile Include="Models\Tracking\QualityOfSleep.cs" />
+    <Compile Include="Models\Tracking\SleepingPeriod.cs" />
+    <Compile Include="Models\Tracking\TrackingData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -312,11 +313,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201312111941300_initialversion.resx">
-      <DependentUpon>201312111941300_initialversion.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,7 +11,6 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Rope.PolyphasicSleepTracker.Web.Migrations;
 using Rope.PolyphasicSleepTracker.Web.Models;
 
 namespace Rope.PolyphasicSleepTracker.Web
@@ -31,7 +30,7 @@ namespace Rope.PolyphasicSleepTracker.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
 
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<UsersContext, Configuration>());
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<SleepTrackerContext, Configuration>());
         }
     }
 }

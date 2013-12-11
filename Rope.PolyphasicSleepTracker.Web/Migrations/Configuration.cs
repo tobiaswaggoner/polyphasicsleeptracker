@@ -5,14 +5,14 @@ namespace Rope.PolyphasicSleepTracker.Web.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Rope.PolyphasicSleepTracker.Web.Models.UsersContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Rope.PolyphasicSleepTracker.Web.Models.SleepTrackerContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Rope.PolyphasicSleepTracker.Web.Models.UsersContext context)
+        protected override void Seed(Rope.PolyphasicSleepTracker.Web.Models.SleepTrackerContext context)
         {
             //  This method will be called after migrating to the latest version.
 
